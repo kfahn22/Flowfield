@@ -8,7 +8,7 @@ In Chapter 5 of "The Nature of Codde," Daniel Shiffman explains how to create a 
 
 2. Crop a sub-section from the image - I used a 32x25 pixel section. I initially tried using the whole image at a lower resolution, but the results weren't very good. 
 
-3. Generate the grid image.  There are a couple of ways to accomplish this. I have two different sketches in the [here](GENERATE_GRID_IMAGE). The simplest adapts some code from Daniel Shiffman to pixelate the image and then applies a filter to change the image to grayscale. The second uses the p5.FIP library to pixelate the image and then change to grayscale. Note that I decided to change to grayscale because I am only using the r value to assign the flowfield and though this is the best way to yield consistent results.
+3. Generate the grid image.  I am using the p5.FIP library to apply pixelate and grayscale filters. Note that I decided to change to grayscale because I am only using the r value to assign the flowfield and thought this is the best way to yield consistent results.
 
  I haven't spend a lot of time playing around with this, but my preliminary efforts suggest it is best to use a very low resolution image and set the "pixelSize" to a small number.
 

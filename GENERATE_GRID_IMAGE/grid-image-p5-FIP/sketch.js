@@ -10,7 +10,7 @@ let canvas, canvasSize;
 let images = [];
 
 function preload() {
-  images.push(loadImage("sky.jpg"));
+  images.push(loadImage("sky2.jpg"));
 }
 function setup() {
   let index = floor(random(images.length));

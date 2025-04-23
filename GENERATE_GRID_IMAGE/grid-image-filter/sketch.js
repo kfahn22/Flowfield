@@ -4,12 +4,12 @@
 // I asked chatGPT for help eliminating an error I was getting from p5.js due to the filter: texture needs an image and received an object. 
 
 let sourceImage;
-let DIM = 16;
+let DIM = 1;
 let w, h;
 let buffer;
 
 function preload() {
-  sourceImage = loadImage("images/sky.jpg");
+  sourceImage = loadImage("sky.jpg");
 }
 
 function setup() {
@@ -37,9 +37,14 @@ function renderToBuffer(img, pg, dim) {
       let g = img.pixels[idx + 1];
       let b = img.pixels[idx + 2];
       pg.fill(r, g, b);
-      pg.stroke(50);
+      //pg.stroke(50);
+      pg.noStroke(5);
       pg.square(i * dim, j * dim, dim);
     }
   }
   pg.pop();
+}
+
+function mousePressed() {
+  save("grid.jpg");
 }
